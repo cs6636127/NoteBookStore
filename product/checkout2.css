@@ -1,0 +1,169 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Type Selector */
+body {
+    background-color: #f9fafb;
+    color: #333;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+/* ID Selector */
+#checkout-summary {
+    margin-top: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Class Selector */
+.part-payment {
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.part-summary {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.part-address {
+    margin-top: 15px;
+}
+
+button{
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Attributes Selector */
+input[type="file"] {
+    border: 1px dashed #aaa;
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Pseudo-Class Selector */
+button:hover,
+input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #353535;
+}
+p::selection {
+    color: #000;
+}
+
+/* Table Styling (Type + Descendant Selector) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+}
+
+table th {
+    background-color: #000000;
+    color: white;
+}
+
+/* Combination Selector */
+/* Descendant Selector */
+.part-address p {
+    margin-left: 10px;
+    color: #444;
+}
+
+/* Child Selector */
+.part-summary>b {
+    color: #000;
+}
+
+/* Adjacent-Sibling Selector */
+h3+p {
+    margin: 10px;
+}
+/*  ปุ่มรอง */
+a.btn-secondary {
+    display: inline-block;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    margin-left: 10px;
+}
+
+a.btn-secondary:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* จัดปุ่มให้อยู่ในแถวเดียวกัน */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+@media (min-width: 601px) {
+    #checkout-summary {
+        max-width: 900px;
+        padding: 30px;
+    }
+
+    table th,
+    table td {
+        font-size: 16px;
+    }
+
+    .part-payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,180 @@
+/* ===== Universal Selector ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Sarabun", sans-serif;
+}
+
+/* ===== Type Selector ===== */
+body {
+    background-color: #e9eef5;
+    color: #2c3e50;
+}
+
+/* ===== Class Selector ===== */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.checkout-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* ===== Descendant Selector ===== */
+.page-container .checkout-wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Child Selector ===== */
+.checkout-wrapper>form>h3 {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* ===== ID Selector ===== */
+#checkout-title {
+    font-size: 1.8em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* ===== Attribute Selector ===== */
+input[type="radio"] {
+    accent-color: #000000;
+}
+
+select[name="phone"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+/* ===== Pseudo-Class Selector ===== */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.back-button button:hover {
+    background-color: #5a6268;
+}
+
+/* ===== Pseudo-Element Selector ===== */
+h3::after {
+    content: " 🛒";
+    font-size: 20px;
+}
+
+/* ===== Class Selector (Address Box) ===== */
+.address {
+    background-color: #f1f7ff;
+    border: 1px solid #d3e3ff;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* ===== Adjacent-Sibling Selector ===== */
+h3+article {
+    margin-top: 10px;
+}
+
+/* ===== Combination Selector ===== */
+.address p {
+    font-size: 0.95em;
+    color: #34495e;
+}
+
+/* ===== Form Actions Container ===== */
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    /* Mobile: ปุ่มวางซ้อนกัน */
+    gap: 15px;
+    /* ระยะห่างระหว่างปุ่ม */
+    width: 100%;
+}
+
+/* ===== ปุ่มย้อนกลับ และยืนยัน ===== */
+.form-actions .back-button button,
+.form-actions .submit-container input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== สีปุ่ม ===== */
+.form-actions .submit-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.form-actions .submit-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-actions .back-button button {
+    background-color: #000000;
+    color: #fff;
+}
+
+.form-actions .back-button button:hover {
+    background-color: #5a6268;
+}
+
+/* ===== Back Button Link ===== */
+.form-actions .back-button a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    /* ให้ link ครอบเต็มปุ่ม */
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== Label Spacing ===== */
+.phone-select label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ===== Responsive Desktop View ===== */
+@media (min-width: 600px) {
+    body {
+        background-color: #e9eef5;
+    }
+
+    .page-container {
+        flex-direction: column;
+        /* เหมือน Mobile */
+        justify-content: center;
+        gap: 20px;
+        /* ระยะห่างระหว่าง wrapper */
+    }
+
+    .checkout-wrapper {
+        width: 100%;
+        /* เต็ม container */
+        max-width: 600px;
+        /* จำกัดไม่เกิน 600px */
+    }
+}

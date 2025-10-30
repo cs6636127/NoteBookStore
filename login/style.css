@@ -1,0 +1,117 @@
+/* ให้ LoginBox อยู่ตรงกลาง body แต่ไม่ทับ navbar */
+body {
+  margin: 0;
+  background-color: #f6f9fc;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: block;
+}
+
+/* กล่อง Login */
+.LoginBox {
+  display: block;
+  /* ใช้ block ตามคำขอ */
+  margin: 50px auto;
+  /* กึ่งกลางแนวนอน และมี margin-top สำหรับแนวตั้ง */
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  position: relative;
+  /* ปรับได้โดยไม่กระทบ navbar */
+}
+
+/* ฟิลด์ใน form */
+.LoginBox fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.LoginBox legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* form-group */
+.LoginBox .form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* label */
+.LoginBox label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* ช่อง input */
+.LoginBox input[type="text"],
+.LoginBox input[type="password"],
+.LoginBox input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.LoginBox input[type="text"]:focus,
+.LoginBox input[type="password"]:focus,
+.LoginBox input[type="file"]:focus {
+  border-color: #147fc6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(20, 127, 198, 0.4);
+}
+
+/* ปุ่ม submit */
+.LoginBox input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.LoginBox input[type="submit"]:hover {
+  background-color: #0d5f97;
+}
+
+/* Footer ของ login (ลิงก์ช่วยเหลือ / สมัครสมาชิก) */
+.LoginBox footer.login-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.LoginBox footer.login-footer a {
+  display: block;
+  color: red;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.LoginBox footer.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive มือถือ */
+@media (max-width: 480px) {
+  .LoginBox {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 30px auto;
+    /* ปรับ margin แนวตั้งเล็กลง */
+  }
+}

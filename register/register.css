@@ -1,0 +1,96 @@
+/*  Universal Selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Type Selector */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f7;
+    line-height: 1.6;
+}
+
+/* Class Selector */
+.container {
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ID Selector */
+#register-title {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/*  Descendant Selector */
+.container label {
+    display: block;
+    margin-top: 12px;
+    color: #333;
+}
+
+/*  Attribute Selector */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+/*  Child Selector */
+.container>form>input[type="submit"] {
+    width: 100%;
+    background: #0071d4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/*  Pseudo-Class Selector */
+input[type="submit"]:hover {
+    background: #0071d4;
+}
+
+/*  Pseudo-Element Selector */
+h2::after {
+    color: #0071d4;
+}
+
+/*  Adjacent-Sibling Selector */
+label+input,
+label+textarea {
+    margin-top: 8px;
+}
+
+/*  Combination Selector */
+input,
+textarea {
+    font-family: inherit;
+    color: #333;
+}
+
+/* Mobile First (default already mobile) */
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .container {
+        max-width: 600px;
+        padding: 40px;
+    }
+}

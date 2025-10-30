@@ -1,0 +1,143 @@
+/* 💡 พื้นฐานทั่วทั้งหน้า */
+body {
+    background-color: #f6f9fc;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 💡 Layout เริ่มต้นสำหรับมือถือ (แนวตั้งทั้งหมด) */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* 💡 เมนูด้านบน (เพราะมือถือจะแสดงแนวตั้งก่อน) */
+.menu {
+    background: #fff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.menu a {
+    display: block;
+    padding: 10px 0;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #147fc6;
+}
+
+/* 💡 ฟอร์ม (อยู่ล่างเมนูในมือถือ) */
+.form-container form,
+.form-wrapper {
+    background: #fff;
+    padding: 24px 28px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 💡 ช่องกรอกข้อมูล */
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #147fc6;
+    outline: none;
+}
+
+/* 💡 ปุ่ม */
+input[type="submit"] {
+    background-color: #147fc6;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d5f97;
+}
+
+/* 💡 ปุ่มลบ */
+.btn-delete {
+    background-color: #ff5c5c;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-delete:hover {
+    background-color: #d94141;
+}
+
+/* 💡 รูปภาพตัวอย่าง */
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+}
+
+/* 💡 กล่องรายการ (address, tel, email) */
+.address-item,
+.tel-item,
+.email-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* 💻 เมื่อจอกว้างขึ้น (tablet + desktop) */
+@media (min-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 30px;
+        max-width: 900px;
+    }
+
+    .menu {
+        position: sticky;
+        top: 20px;
+        height: fit-content;
+    }
+}

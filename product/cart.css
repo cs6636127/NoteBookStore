@@ -1,0 +1,151 @@
+/* ===== Universal Selector ===== */
+* {
+    box-sizing: border-box;
+    font-family: "Sarabun", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Body - Center All Content ===== */
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Heading ===== */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ===== Cart Table ===== */
+#cartTable {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e3e6ea;
+}
+
+#cartTable th {
+    background: #000000;;
+    color: white;
+    padding: 16px 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#cartTable td {
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 10px;
+    background-color: #ffffff;
+    font-size: 0.95em;
+    border-bottom: 1px solid #edf0f3;
+}
+
+#cartTable tr:nth-child(even) td {
+    background-color: #f9fbff;
+}
+
+#cartTable tr:hover td {
+    background-color: #f8f8f8;
+}
+
+/* ===== Total Row ===== */
+.cart-total td {
+    font-weight: bold;
+    background-color: #e3f2fd;
+    text-align: right;
+    font-size: 1.1em;
+}
+
+/* ===== Promo Table ===== */
+#promoTable {
+    width: 70%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #dee2e6;
+}
+
+#promoTable th {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 14px;
+    font-weight: 600;
+}
+
+#promoTable td {
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#promoTable tr:nth-child(even) td {
+    background-color: #f7f9fc;
+}
+
+#promoTable tr:hover td {
+    background-color: #ffffff;
+}
+
+/* ===== Promo Dropdown ===== */
+.promo-select {
+    text-decoration: none;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.promo-select>select {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1em;
+}
+
+.promo-select>select:hover,
+.promo-select>select:focus {
+    border-color: #202020;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* ===== Checkout Button ===== */
+.checkout-container {
+    text-decoration: none;
+    text-align: center;
+}
+
+.checkout-link {
+    background-color: #000000;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+a.checkout-link {
+    text-decoration: none;
+}
+.checkout-link:hover {
+    background-color: #2a2a2a;
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.4);
+}
+/* ===== Decorative Icon ===== */
+h1::after {
+    margin: 1px;
+}

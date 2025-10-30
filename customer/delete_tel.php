@@ -1,0 +1,28 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+session_start();
+include "../login/connect.php";
+
+if (!isset($_SESSION["username"])) {
+    header("Location: ../login/login-form.php");
+    exit;
+}
+
+$username = $_SESSION["username"];
+$tel = $_GET["tel"] ?? "";
+
+try {
+    $stmt = $pdo->prepare("DELETE FROM customer_tel WHERE username_cus = ? AND tel_cus = ?");
+    $stmt->execute([$username, $tel]);
+
+    if ($stmt->rowCount() > 0) {
+        echo "<script>alert('✅ ลบเบอร์โทรศัพท์เรียบร้อยแล้ว'); window.location.href='add_delete.php';</script>";
+    } else {
+        echo "<script>alert('⚠️ ไม่พบเบอร์โทรศัพท์ในระบบ'); window.location.href='add_delete.php';</script>";
+    }
+
+} catch (PDOException $e) {
+    echo "<script>alert('เกิดข้อผิดพลาด: {$e->getMessage()}'); window.location.href='add_delete.php';</script>";
+}
+?>

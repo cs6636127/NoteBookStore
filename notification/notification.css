@@ -1,0 +1,159 @@
+/* ===== Global (Mobile First) ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efefef;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ===== Notification List ===== */
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+}
+
+.notification-item {
+    background-color: #fff;
+    color: #000;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.notification-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.notification-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.notification-item a:hover {
+    color: #444;
+}
+
+/* ===== Notification Detail Card ===== */
+.notification-card {
+    background: #fff;
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.notification-card section p strong {
+    color: #262626;
+}
+
+.notification-card footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-link:hover {
+    background-color: #272727;
+    transform: translateY(-2px);
+}
+
+/* ===== Order Table ===== */
+.order-table {
+        border-radius: 8px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.order-table th,
+.order-table td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+}
+
+.order-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#price-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 10px;
+    color: #131313;
+}
+
+#price-summary p {
+    margin: 0;
+}
+
+/* ===== Media Queries for Larger Screens ===== */
+@media (min-width: 481px) {
+    body {
+        background-color: #efefef;
+    }
+
+    .notifications {
+        width: 90%;
+        gap: 1rem;
+    }
+
+    .notification-card {
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 8px;
+    }
+
+    #total-price,
+    #final-price {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: #efefef;
+    }
+
+    .notifications {
+        max-width: 700px;
+    }
+
+}
